@@ -31,7 +31,7 @@ input[type="datetime-local"]::-webkit-inner-spin-button {
 
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   font-size: 15px;
-  background-image: url(./Ui/check.png);
+  /* background-image: url(./Ui/check.png); */
 }
 
 ::-webkit-datetime-edit {
@@ -39,4 +39,34 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   padding: 0 px;
   display: none;
   border: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 64px;
+  margin: 5px;
+}
+
+.logo span {
+  font-size: 64px;
+  color: #2196f3;
+}
+
+.timer {
+  text-align: center;
+}
+
+.timer .time {
+  font-size: 40px;
+  font-weight: bold;
 }
