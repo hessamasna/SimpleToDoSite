@@ -12,6 +12,10 @@ body {
   background-image: linear-gradient(315deg, #08aeea 0%, #2af598 98%);
 }
 
+.main {
+  margin: 0 5%;
+}
+
 input[type="datetime-local"] {
   background-color: transparent;
   outline: none;
@@ -30,7 +34,8 @@ input[type="datetime-local"]::-webkit-inner-spin-button {
 }
 
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
-  font-size: 15px;
+  font-size: 1.4vmax;
+  cursor: pointer;
   /* background-image: url(./Ui/check.png); */
 }
 
@@ -43,8 +48,9 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .logo {
@@ -53,12 +59,13 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 .logo img {
-  height: 64px;
+  height: 10vw;
+  max-height: 64px;
   margin: 5px;
 }
 
 .logo span {
-  font-size: 64px;
+  font-size: 2rem;
   color: #2196f3;
 }
 
@@ -67,6 +74,59 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 .timer .time {
-  font-size: 40px;
+  font-size: 2rem;
   font-weight: bold;
+}
+
+.timer .sub {
+  font-size: 1.5vmax;
+}
+
+.tasks {
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+.tasks::-webkit-scrollbar {
+  display: none;
+}
+
+.tasks ul {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.tasks li {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 13px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.tasks i {
+  color: white;
+  font-size: 1.8vmax;
+}
+
+.task-line {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.task-line button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 0;
+}
+
+.add-new-task {
+  background-color: silver;
+  height: 10vh;
+  display: none;
 }
