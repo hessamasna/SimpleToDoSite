@@ -106,11 +106,6 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   margin-bottom: 15px;
 }
 
-.tasks i {
-  color: white;
-  font-size: 1.8vmax;
-}
-
 .task-line {
   display: flex !important;
   justify-content: space-between !important;
@@ -123,6 +118,11 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   border-radius: 100%;
   padding: 0;
+}
+
+.task-line i {
+  color: white;
+  font-size: 1.8vmax;
 }
 
 .add-new-task {
