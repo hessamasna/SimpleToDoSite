@@ -8,4 +8,35 @@ fontColor  #e6e6e6
 hover     #cc4f51  */
 body {
   font-family: "Poppins-Regular";
+  background-color: #08aeea;
+  background-image: linear-gradient(315deg, #08aeea 0%, #2af598 98%);
+}
+
+input[type="datetime-local"] {
+  background-color: transparent;
+  outline: none;
+  /* display: none; */
+  border: none;
+}
+
+input[type="datetime-local"]::-webkit-clear-button {
+  font-size: 18px;
+  height: 30px;
+  position: relative;
+}
+
+input[type="datetime-local"]::-webkit-inner-spin-button {
+  height: 28px;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  font-size: 15px;
+  background-image: url(./Ui/check.png);
+}
+
+::-webkit-datetime-edit {
+  padding: 1em;
+  padding: 0 px;
+  display: none;
+  border: none;
 }
