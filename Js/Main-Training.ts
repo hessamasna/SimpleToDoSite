@@ -10,7 +10,9 @@
 //   );
 //   return uuid;
 // }
+
 // // var upgradeTime = 222801;
+
 // function findmonth(count) {
 //   var months = [
 //     "December",
@@ -28,6 +30,7 @@
 //   ];
 //   return months[count];
 // }
+
 // function findWeekDay(count) {
 //   var days = [
 //     "Friday",
@@ -40,6 +43,7 @@
 //   ];
 //   return days[count];
 // }
+
 // var alltasks = [
 //   {
 //     id: 0,
@@ -56,12 +60,16 @@
 //     isBookmark: false,
 //   },
 // ];
+
 // alltasks.forEach(enterTasksToPage);
+
 // function plus() {
-//   var addNewTaskText = document.getElementById("task-text").value;
-//   var newTaskDateAndTime = document.getElementById("dateAndTime").value;
+//   let addNewTaskText = document.getElementById("task-text").value;
+//   let newTaskDateAndTime = document.getElementById("dateAndTime").value;
 //   console.log(newTaskDateAndTime);
-//   var id, isDone, taskText, time, isBookmark, dateSplit;
+
+//   let id, isDone, taskText, time, isBookmark, dateSplit;
+
 //   id = create_UUID();
 //   isDone = false;
 //   taskText = addNewTaskText;
@@ -76,24 +84,20 @@
 //       min: 0,
 //     };
 //   } else {
-//     var taskDate = newTaskDateAndTime.split("T");
-//     var date = new Date(
+//     let taskDate = newTaskDateAndTime.split("T");
+
+//     let date = new Date(
 //       taskDate[0].split("-")[0],
 //       taskDate[0].split("-")[1],
 //       taskDate[0].split("-")[2],
 //       taskDate[1].split(":")[0],
 //       taskDate[1].split(":")[1]
 //     );
-//     time =
-//       findWeekDay(date.getDay()) +
-//       ", " +
-//       findmonth(date.getMonth()) +
-//       " " +
-//       taskDate[0].split("-")[2] +
-//       " " +
-//       taskDate[1].split(":")[0] +
-//       ":" +
-//       taskDate[1].split(":")[1];
+
+//     time = `${findWeekDay(date.getDay())}, ${findmonth(date.getMonth())} ${
+//       taskDate[0].split("-")[2]
+//     } ${taskDate[1].split(":")[0]}:${taskDate[1].split(":")[1]}`;
+
 //     dateSplit = {
 //       year: taskDate[0].split("-")[0],
 //       month: taskDate[0].split("-")[1],
@@ -102,6 +106,7 @@
 //       min: taskDate[1].split(":")[1],
 //     };
 //   }
+
 //   alltasks.push({
 //     id: id,
 //     isDone: isDone,
@@ -110,37 +115,35 @@
 //     dateSplit: dateSplit,
 //     isBookmark: isBookmark,
 //   });
+
 //   alltasks.forEach(enterTasksToPage);
 // }
+
 // function bookmark() {}
+
 // function enterTasksToPage(item) {
-//   var taskList = document.getElementById("task-list");
+//   let taskList = document.getElementById("task-list");
 //   var li = document.createElement("li");
-//   var insideLi =
-//     '<div class="hiddenId">' +
-//     item.id +
-//     '</div><div class="task-line"><div style="display: flex; align-items: center;"><button id="check"><i class="far fa-circle"></i></button><div style="font-size:  1.2vmax; margin-left: 10px;">' +
-//     item.taskText +
-//     '</div></div><div><div style="display: flex; align-items: center;"><div style="margin-right: 20px; font-size:  1.2vmax;">' +
-//     item.time +
-//     '</div><button id="bookmark"><i class="far fa-bookmark"></i></button></div></div></div>';
+//   let insideLi = `<div class="hiddenId">${item.id}</div><div class="task-line"><div style="display: flex; align-items: center;"><button id="check"><i class="far fa-circle"></i></button><div style="font-size:  1.2vmax; margin-left: 10px;">${item.taskText}</div></div><div><div style="display: flex; align-items: center;"><div style="margin-right: 20px; font-size:  1.2vmax;">${item.time}</div><button id="bookmark"><i class="far fa-bookmark"></i></button></div></div></div>`;
 //   li.innerHTML = insideLi;
-//   //   taskList.remove();
 //   taskList.appendChild(li);
 //   // console.log(li);
 // }
-// var today = new Date();
+
+// const today = new Date();
 // console.log(today);
+
 // function timeBetween(item) {
-//   var time = new Date(
+//   let time = new Date(
 //     item[0].dateSplit.year,
 //     item[0].dateSplit.month,
 //     item[0].dateSplit.day,
 //     item[0].dateSplit.hour,
 //     item[0].dateSplit.min
 //   );
-//   var fffff = (time.getTime() - today.getTime()) / 1000;
+//   let fffff = (time.getTime() - today.getTime()) / 1000;
 //   console.log(fffff);
+
 //   return Math.round((time.getTime() - today.getTime()) / 1000);
 // }
 // var seconds = timeBetween(alltasks);
@@ -170,6 +173,7 @@
 //   }
 // }
 // var countdownTimer = setInterval("timer()", 1000);
+
 // //   function makeTaskHtml(task){
 // //     //   let li = `<div class="task-line"><div style="display: flex; align-items: center;"><button id="check"><i class="far fa-circle"></i></button><div style="font-size:  1.2vmax; margin-left: 10px;">${task}</div></div><div><div style="display: flex; align-items: center;"><div style="margin-right: 20px; font-size:  1.2vmax;">Wednesday, April 20 23:10</div><button id="bookmark"><i class="far fa-bookmark"></i></button></div></div></div>`
 // //   }
