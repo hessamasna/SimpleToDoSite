@@ -12,7 +12,7 @@
     <link rel="shortcut icon" type="image/png" href="img/check.png" />
     <link rel="stylesheet" href="Css/Main.css">
     <script src="https://kit.fontawesome.com/5ae95ba696.js" crossorigin="anonymous"></script>
-    <script src="Js/Main.js"></script>
+    <script src="Js/Main.js" defer></script>
 
 </head>
 
@@ -26,15 +26,19 @@
                 <span>ToDo</span>
             </div>
             <div class="timer">
-                <!-- <div class="time">23:40:01</div>
-                <div class="sub">ToDo The closest task</div> -->
-                <div class="time" id="timer-time">&#128564;</div>
-                <div class="sub" id="timer-sub">There's Nothing to do</div>
+                <div style="display: block;">
+                    <div class="time" id="test">23:40:01</div>
+                    <div class="sub">ToDo The closest task</div>
+                </div>
+                <div style="display: none;">
+                    <div class="time" id="timer-time">&#128564;</div>
+                    <div class="sub" id="timer-sub">There's Nothing to do</div>
+                </div>
             </div>
         </div>
         <div class="tasks">
-            <ul>
-                <li>
+            <ul id="task-list">
+                <!-- <li>
                     <div class="task-line">
                         <div style="display: flex; align-items: center;">
                             <button id="check">
@@ -46,7 +50,6 @@
                         </div>
                         <div>
                             <div style="display: flex; align-items: center;">
-                                <!-- <input type="datetime-local" id="dateAndTime">  -->
                                 <div style="margin-right: 20px; font-size:  1.2vmax;">
                                     Wednesday, April 20 23:10
                                 </div>
@@ -56,195 +59,7 @@
                             </div>
                         </div>
                     </div>
-                </li>
-                <!-- <div class="time">23:40:01</div>-->
-
-                <li>
-                    <div class="task-line">
-                        <div style="display: flex; align-items: center;">
-                            <button id="check">
-                                <i class="far fa-circle"></i>
-                            </button>
-                            <div style="font-size:  1.2vmax; margin-left: 10px;">
-                                Task one for demo in progress and bookmarked ...
-                            </div>
-                        </div>
-                        <div>
-                            <div style="display: flex; align-items: center;">
-                                <!-- <input type="datetime-local" id="dateAndTime">  -->
-                                <div style="margin-right: 20px; font-size:  1.2vmax;">
-                                    Wednesday, April 20 23:10
-                                </div>
-                                <button id="bookmark">
-                                    <i class="far fa-bookmark"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="task-line">
-                        <div style="display: flex; align-items: center;">
-                            <button id="check">
-                                <i class="far fa-circle"></i>
-                            </button>
-                            <div style="font-size:  1.2vmax; margin-left: 10px;">
-                                Task one for demo in progress and bookmarked ...
-                            </div>
-                        </div>
-                        <div>
-                            <div style="display: flex; align-items: center;">
-                                <!-- <input type="datetime-local" id="dateAndTime">  -->
-                                <div style="margin-right: 20px; font-size:  1.2vmax;">
-                                    Wednesday, April 20 23:10
-                                </div>
-                                <button id="bookmark">
-                                    <i class="far fa-bookmark"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="task-line">
-                        <div style="display: flex; align-items: center;">
-                            <button id="check">
-                                <i class="far fa-circle"></i>
-                            </button>
-                            <div style="font-size:  1.2vmax; margin-left: 10px;">
-                                Task one for demo in progress and bookmarked ...
-                            </div>
-                        </div>
-                        <div>
-                            <div style="display: flex; align-items: center;">
-                                <!-- <input type="datetime-local" id="dateAndTime">  -->
-                                <div style="margin-right: 20px; font-size:  1.2vmax;">
-                                    Wednesday, April 20 23:10
-                                </div>
-                                <button id="bookmark">
-                                    <i class="far fa-bookmark"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="task-line">
-                        <div style="display: flex; align-items: center;">
-                            <button id="check">
-                                <i class="far fa-circle"></i>
-                            </button>
-                            <div style="font-size:  1.2vmax; margin-left: 10px;">
-                                Task one for demo in progress and bookmarked ...
-                            </div>
-                        </div>
-                        <div>
-                            <div style="display: flex; align-items: center;">
-                                <!-- <input type="datetime-local" id="dateAndTime">  -->
-                                <div style="margin-right: 20px; font-size:  1.2vmax;">
-                                    Wednesday, April 20 23:10
-                                </div>
-                                <button id="bookmark">
-                                    <i class="far fa-bookmark"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="task-line">
-                        <div style="display: flex; align-items: center;">
-                            <button id="check">
-                                <i class="far fa-circle"></i>
-                            </button>
-                            <div style="font-size:  1.2vmax; margin-left: 10px;">
-                                Task one for demo in progress and bookmarked ...
-                            </div>
-                        </div>
-                        <div>
-                            <div style="display: flex; align-items: center;">
-                                <!-- <input type="datetime-local" id="dateAndTime">  -->
-                                <div style="margin-right: 20px; font-size:  1.2vmax;">
-                                    Wednesday, April 20 23:10
-                                </div>
-                                <button id="bookmark">
-                                    <i class="far fa-bookmark"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="task-line">
-                        <div style="display: flex; align-items: center;">
-                            <button id="check">
-                                <i class="far fa-circle"></i>
-                            </button>
-                            <div style="font-size:  1.2vmax; margin-left: 10px;">
-                                Task one for demo in progress and bookmarked ...
-                            </div>
-                        </div>
-                        <div>
-                            <div style="display: flex; align-items: center;">
-                                <!-- <input type="datetime-local" id="dateAndTime">  -->
-                                <div style="margin-right: 20px; font-size:  1.2vmax;">
-                                    Wednesday, April 20 23:10
-                                </div>
-                                <button id="bookmark">
-                                    <i class="far fa-bookmark"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="task-line">
-                        <div style="display: flex; align-items: center;">
-                            <button id="check">
-                                <i class="far fa-circle"></i>
-                            </button>
-                            <div style="font-size:  1.2vmax; margin-left: 10px;">
-                                Task one for demo in progress and bookmarked ...
-                            </div>
-                        </div>
-                        <div>
-                            <div style="display: flex; align-items: center;">
-                                <!-- <input type="datetime-local" id="dateAndTime">  -->
-                                <div style="margin-right: 20px; font-size:  1.2vmax;">
-                                    Wednesday, April 20 23:10
-                                </div>
-                                <button id="bookmark">
-                                    <i class="far fa-bookmark"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="task-line">
-                        <div style="display: flex; align-items: center;">
-                            <button id="check">
-                                <i class="far fa-circle"></i>
-                            </button>
-                            <div style="font-size:  1.2vmax; margin-left: 10px;">
-                                Task one for demo in progress and bookmarked ...
-                            </div>
-                        </div>
-                        <div>
-                            <div style="display: flex; align-items: center;">
-                                <!-- <input type="datetime-local" id="dateAndTime">  -->
-                                <div style="margin-right: 20px; font-size:  1.2vmax;">
-                                    Wednesday, April 20 23:10
-                                </div>
-                                <button id="bookmark">
-                                    <i class="far fa-bookmark"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
+                </li> -->
             </ul>
         </div>
         <div class="add-new-task">

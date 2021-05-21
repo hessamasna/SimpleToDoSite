@@ -92,7 +92,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 .tasks {
   height: 70vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .tasks::-webkit-scrollbar {
@@ -184,4 +184,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: white;
+}
+.hiddenId {
+  display: none;
 }
